@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+  <form action="submitForm" method="POST" id="contact-form">
+   
+    <input type="text" id="name" name="name" placeholder="Your Name..." required>
+    <input type="email" id="email" name="email" placeholder="Email Address..." required>
+    <textarea name="message" id="message" placeholder="Your Message..." required></textarea>
+  
+    <div class="g-recaptcha" data-sitekey="6LckUQ4dAAAAAMCQ28zC-FchooSH5cIlx9GYnGH9" data-theme="light"></div>
+    
+    <button type="submit">SEND</button>
+    
+    <div class="output-message">
+      <% if (typeof success !="undefined" && success) { %>
+        <div class="success">
+          <p>
+            <%= message %>
+          </p>
+        </div>
+      <% } else if (typeof success !="undefined" && !success) { %>
+        <div class="error">
+          <p>
+            <%= message %>
+          </p>
+        </div>
+      <% } %>
+    </div>
+
+  </form>
+
+  <script src="/js/script.js"></script>
+
+<%- include("partials/header.ejs") %>

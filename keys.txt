@@ -1,0 +1,4 @@
+API_KEY= your mailgun api key
+DOMAIN= your mailgun domain
+
+SECRET_KEY= your reCaptcha secret key
